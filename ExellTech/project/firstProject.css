@@ -1,0 +1,23 @@
+#abc{
+    color: white;
+    text-align: center;
+}
+#mk{
+    color: white;
+    text-align: center;
+    }
+#nj{
+    color: rgb(15, 100, 165);
+    padding: 20px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 30px;
+}
+/* Button:hover{
+    background-color: #2196f3;
+    color: black;
+} */
+body{
+    background-color: rgb(198, 110, 78);
+    text-align: center;
+}
