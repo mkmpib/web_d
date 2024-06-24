@@ -4,10 +4,21 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Form</title>
+    <style>
+        table{
+            /* background-image:linear-gradient(to right,white,rgb(150, 178, 238)) ;
+             */
+             background-color: rgb(228, 233, 254);
+             /* border-radius: 15px; */
+        }
+        th{
+          /* border-radius: 60px; */
+        }
+</style>
   </head>
-  <body>
+  <body>    
     <center>
-      <table width="50%" border="1px solid red">
+      <table width="40%" border="2px solid red">
         <tr>
           <th>
             <label style="font-style: oblique">PLEASE FILL THIS FORM</label>
@@ -16,19 +27,19 @@
         <tr>
           <br />
           <th>
-            <br />
+            
             <label>NAME</label>
-            <input type="text" /> <br />
+            <input type="text" placrholder="Enter the name"/> <br />
             <br /></th>
         </tr>
         <tr>
             <th>
             <label>ROLL NUMBER</label>
-            <input type="number" /> <br />
+            <input type="number" placeholder="Enter the number"/> <br />
             <br /></th></tr>
             <tr><th>
             <label>CLASS</label>
-            <input type="text" /><br />
+            <input type="text" placeholder="Eneter the class"/><br />
             <br /></th></tr>
             <tr><th>
             <label>Email</label>
@@ -39,6 +50,10 @@
               placeholder="xyz@gmail.com"
             />
             <br /><br /></th></tr>
+            <tr><th>
+            <label>Password</label>
+            <input type="password" /><br />
+            <br /></th></tr>
             <tr><th><label>Date:</label>
             <input type="date" />
             <br /><br /></th></tr>
