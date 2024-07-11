@@ -1,0 +1,215 @@
+<html>
+  <head>
+    <script
+      src="https://kit.fontawesome.com/df40acae41.js"
+      crossorigin="anonymous"
+    ></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <title>Animation Website</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 3px;
+      }
+      body {
+        background-image: linear-gradient(rgb(11, 7, 63), blue);
+      }
+     
+
+      @media screen and (max-width: 940px) {
+        .main {
+          flex-wrap: wrap;
+        }
+        .smain {
+          flex-wrap: wrap;
+        }
+      }
+      @media screen and (max-width: 736px) {
+        .a {
+          display: block;
+          order: 1;
+          margin-right: 20px;
+        }
+      }
+      @media screen and (max-width: 641px) {
+        .a ul li {
+          display: none;
+         
+        }
+        .a h2 {
+          text-align: center;
+          padding: 10px;
+          margin: 2px auto;
+        }
+      }
+      .a {
+        display: flex;
+        justify-content: space-between;
+        color: aliceblue;
+        /* margin: -70px; */
+      }
+      .a ul {
+        display: flex;
+        list-style: none;
+      }
+      .a ul li {
+        margin: 15px;
+        
+        
+      }
+      .head {
+        color: rgb(200, 213, 224);
+      }
+      .main{
+        display: flex;
+        padding: 20px;
+        gap: 15px;
+        /* position: relative;
+        top: 10cm; */
+      }
+      .smain {
+        display: flex;
+        padding: 20px;
+        gap: 15px;
+      }
+      .box1 {
+        border: 2px solid white;
+        padding-top: 30px;
+        padding-left: 30px;
+        padding-bottom: 30px;
+        padding-right: 30px;
+        /* position:relative;
+        top:10px; */
+      }
+      .box2 {
+        border: 2px solid white;
+        padding-top: 30px;
+        padding-left: 30px;
+        padding-bottom: 30px;
+        padding-right: 30px;
+      }
+      .box1:hover {
+        background-color: rgba(0, 255, 255, 0.67);
+        color: black;
+        /* transform: scale(1.05); */
+      }
+      /* .box1{
+        transition:ease-in-out 1.3s;
+      } */
+      .box2:hover {
+        background-color: rgba(0, 255, 255, 0.67);
+        color: black;
+        /* transform: scale(1.5); */
+      }
+      /* .box2{
+        transition:ease-in-out 1.3s;
+      } */
+    </style>
+  </head>
+  <body>
+    <div class="bgimg">
+      <div class="a">
+        <h2>Mariko</h2>
+        <ul>
+          <li>Home</li>
+          <li>About</li>
+          <li>Services</li>
+          <li>plans</li>
+          <li>Drop</li>
+          <li>content</li>
+          <li>
+            <img
+              src="https://cdn-icons-png.flaticon.com/128/145/145802.png"
+              width="20px"
+            />
+          </li>
+          <li>
+            <img
+              src="https://cdn-icons-png.flaticon.com/128/3670/3670151.png"
+              width="20px"
+            />
+          </li>
+        </ul>
+      </div>
+      <div class="head">
+        <center>
+          <h3>OUR SERVICES</h3>
+          <h2>Explore Unlimited possibilites</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat
+            ullam corporis suscipit, provident quasi, mollitia vitae qui officia
+            recusandae eos nobis eaque fugit eveniet tenetur? Voluptatibus rerum
+            nihil facere exercitationem? Accusantium, nemo. Tenetur, facilis
+            laboriosam, sunt quod eligendi corrupti, suscipit hic porro sapiente
+            consequuntur qui tempore a reiciendis? Quod asperiores provident
+            voluptatum autem voluptate aut. Aliquid?
+          </p>
+        </center>
+        <div class="main">
+          <div class="box1" data-aos="fade-right">
+            <i class="fa-solid fa-house"></i>
+            <h2>Home Broadbnd</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum
+              delectus nihil eum? Perferendis, ullam neque! Iusto saepe ea fugit
+              atque fugiat et in aspernatur consequuntur.
+            </p>
+          </div>
+          <div class="box1" data-aos="fade-right">
+            <i class="fa-solid fa-wifi"></i>
+            <h2>HOME WIFI</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum
+              porro maiores, magni earum ex id, corporis, officiis alias
+              suscipit dolorem sunt eaque et ad totam.
+            </p>
+          </div>
+          <div class="box1" data-aos="fade-right">
+            <i class="fa-solid fa-phone"></i>
+            <h2>HOME BROADBAND</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit
+              asperiores neque facere deleniti sit repudiandae, saepe,
+              distinctio sequi delectus accusantium dignissimos eveniet et,
+              minima voluptatibus!
+            </p>
+          </div>
+        </div>
+        <div class="smain">
+          <div class="box2" data-aos="fade-right">
+            <i class="fa-solid fa-mobile"></i>
+            <h2>MOBILE CONNECTION</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum
+              delectus nihil eum? Perferendis, ullam neque! Iusto saepe ea fugit
+              atque fugiat et in aspernatur consequuntur.
+            </p>
+          </div>
+          <div class="box2" data-aos="fade-right">
+            <i class="fa-solid fa-wifi"></i>
+            <h2>SECURITY</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum
+              porro maiores, magni earum ex id, corporis, officiis alias
+              suscipit dolorem sunt eaque et ad totam.
+            </p>
+          </div>
+          <div class="box2" data-aos="fade-right">
+            <i class="fa-solid fa-desktop"></i>
+            <h2>Tv SETUP BOX</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit
+              asperiores neque facere deleniti sit repudiandae, saepe,
+              distinctio sequi delectus accusantium dignissimos eveniet et,
+              minima voluptatibus!
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>

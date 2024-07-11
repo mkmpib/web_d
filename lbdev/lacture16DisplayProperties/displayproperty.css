@@ -1,0 +1,35 @@
+*{
+    padding: 0px;
+    margin: 0px;
+   
+}
+
+p{
+    background-color: red;
+}
+span{
+    background-color:black;
+    color:aliceblue;
+    padding: 4px;
+    margin: 4px;
+}
+.box{
+     box-sizing:border-box;
+    height: 300px;
+    width: 300px;
+    margin: 100px;
+    padding: 45px;
+    border: 2px solid black;
+}
+.box2{
+     /* box-sizing:border-box; */
+    height: 300px;
+    width: 300px;
+    margin: 100px;
+    padding: 45px;
+    border: 2px solid black;
+}
+.ram span{
+    display: block;
+    display: inline;
+}

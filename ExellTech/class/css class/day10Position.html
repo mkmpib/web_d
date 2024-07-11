@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Use of positions</title>
+    <style>
+      * {
+        /* background-color: black; */
+      }
+      .main {
+        background-image: url(https://w0.peakpx.com/wallpaper/410/412/HD-wallpaper-plain-black-black.jpg);
+      }
+      .logo {
+        display: flex;
+        justify-content: space-between;
+      }
+      h3 {
+        position: relative;
+        left: 13cm;
+      }
+      .nav ul li {
+        list-style: none;
+        border: 3px solid black;
+        width: 130px;
+        margin: 6px;
+        position: relative;
+        top: cm;
+        right: 5cm;
+        background-color: rgb(243, 239, 239);
+      }
+      .nav ul {
+        display: flex;
+        /* width: 100%; */
+        background-color: rgb(234, 226, 226);
+      }
+      .first {
+        background-color: black;
+        height: 100vh;
+        width: 100%;
+      }
+      .con {
+        border: 1px black;
+        display: flex;
+        padding: 1px;
+        margin: px;
+      }
+      .con h2 {
+        background-color: yellow;
+        width: 3000px;
+        height: 28px;
+        /* text-align: center; */
+      }
+      .con img {
+        width: 500px;
+        margin: 22px;
+        border: yellow solid 2px;
+        transition: all ease-in-out 1s;
+      }
+      .con img:hover {
+        transform: scale(1.05);
+      }
+      .auto p {
+        color: black;
+      }
+      .auto {
+        color: rgba(240, 248, 255, 0.655);
+        width: 400px;
+        background-color: white;
+        color: rgb(239, 232, 232);
+        margin: 20px;
+        border: solid 3px rgb(252, 252, 7);
+        transition: all ease-in-out 1s;
+      }
+      .auto:hover {
+        transform: scale(1.05);
+      }
+      .auto img {
+        margin-right: -100px;
+        width: 100%;
+        height: 140px;
+      }
+
+      .auto h2 {
+        text-align: center;
+
+        background-color: rgb(221, 103, 29);
+      }
+      .imgs {
+        padding: 2px;
+        margin: 10px;
+        display: flex;
+      }
+      @media screen and (max-width: 1000px) {
+        .main {
+          background-color: rgb(247, 245, 245);
+          width: 100%;
+          display: flex;
+          flex-wrap: wrap;
+        }
+        .nav {
+          display: none;
+        }
+        .first .con {
+          display: inline;
+        }
+      }
+
+      @media screen and (max-width: 576px) {
+        body {
+          background-color: black; 
+          /* body ka color black dene se hi hoga images ke piche ka color black nhi to toda toda hi hoga */
+        }
+        .imgs {
+          margin-top: 400px;
+          display: inline-block;
+          /* background-color: black; */
+        }
+        .logo h3 {
+          display: none;
+        }
+        .con {
+          width: 500px;
+        }
+        .con p {
+          width: 400px;
+        }
+        .con img {
+          width: 430px;
+        }
+        .con h2 {
+          width: 430px;
+          margin: 30px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <div class="logo">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuFBefCvWj8CS9h8Ie1__RVZDUYUHg-9oaQQ&s"
+          width="200px"
+        />
+        <h3>Call TOLL FREE 1-5670-678</h3>
+        <br />
+      </div>
+      <div class="nav">
+        <ul>
+          <li>HOME</li>
+          <li style="width: 200px">MARKET SEGMENTS</li>
+          <li>SERVICES</li>
+          <li>PRODUCTS</li>
+          <li>PROMOTIONS</li>
+          <li>MARKET AREA</li>
+          <li style="width: 200px">MARKET INFORMSTION</li>
+          <li>CONTACT US</li>
+        </ul>
+      </div>
+      <div class="first">
+        <div class="con">
+          <img
+            src="https://www.mobil.co.in/-/media/project/wep/mobil/mobil-in/business/lc-static/static-banner-fb-og-1200x630.jpg"
+          />
+          <h2>
+            ABOUT LEGACY LUBRICANTS
+            <p style="color: white; font-size: 18px">
+              40 Years of Experience in lubricants
+            </p>
+            <p style="color: aliceblue; font-size: 18px">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus
+              enim eum nulla asperiores, molestias qui. Sit molestiae fuga ad.
+              Provident, dicta. Provident iure totam natus eum asperiores est
+              atque pariatur fuga, saepe commodi omnis facere at cupiditate
+              tempora ab beatae itaque exercitationem. Labore, minima numquam
+              pariatur eos blanditiis esse eum deserunt nobis laboriosam, ab
+              magnam porro.
+            </p>
+            <p style="color: aliceblue; font-size: 18px">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus
+              enim eum nulla asperiores, molestias qui. Sit molestiae fuga ad.
+              Provident, dicta. Provident iure totam natus eum asperiores est
+              atque pariatur fuga, saepe commodi omnis facere at cupiditate
+              tempora ab beatae itaque exercitationem. Labore, minima numquam
+              pariatur eos blanditiis esse eum deserunt nobis laboriosam, ab
+              magnam porro.
+            </p>
+          </h2>
+        </div>
+        <div class="imgs">
+          <div class="auto">
+            <h2>AUTOMOTIVE</h2>
+            <img
+              src="https://www.motorindiaonline.in/wp-content/uploads/2021/08/Skill-Development-1.jpg"
+            />
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque
+              quae officiis laboriosam possimus? Quam recusandae, reiciendis
+              corrupti laborum natus dolorem repudiandae accusamus animi eaque
+              quod esse autem rerum, iusto dignissimos expedita tempore. !
+            </p>
+          </div>
+          <div class="auto">
+            <h2>COMMERCIAL</h2>
+            <img
+              src="https://as2.ftcdn.net/v2/jpg/01/24/44/77/1000_F_124447756_rtQe5uWt52HUMG186z56ebEzOFlzPNc6.jpg"
+            />
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque
+              quae officiis laboriosam possimus? Quam recusandae, reiciendis
+              corrupti laborum natus dolorem repudiandae accusamus animi eaque
+              quod esse autem rerum, iusto dignissimos expedita tempore. !
+            </p>
+          </div>
+          <div class="auto">
+            <h2>INDUSTRIAL</h2>
+            <img
+              src="https://media.istockphoto.com/id/1345979900/photo/whats-your-thoughts.jpg?s=612x612&w=0&k=20&c=2bfNPXr42HOTLvR-Lv8naW2QZ8FItbqJVG5rw1zI-G0="
+            />
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque
+              quae officiis laboriosam possimus? Quam recusandae, reiciendis
+              corrupti laborum natus dolorem repudiandae accusamus animi eaque
+              quod esse autem rerum, iusto dignissimos expedita tempore. !
+            </p>
+          </div>
+          <div class="auto">
+            <h2>SERVICE AREAS</h2>
+            <img
+              src="https://5.imimg.com/data5/SELLER/Default/2021/12/WH/SI/TF/14650014/ecomax-all-in-one-products--500x500.jpeg"
+            />
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque
+              quae officiis laboriosam possimus? Quam recusandae, reiciendis
+              corrupti laborum natus dolorem repudiandae accusamus animi eaque
+              quod esse autem rerum, iusto dignissimos expedita tempore. !
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

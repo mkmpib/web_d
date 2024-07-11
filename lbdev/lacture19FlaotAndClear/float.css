@@ -1,0 +1,36 @@
+ .container img{
+        width: 300px;
+        height: 400px;
+    
+}
+.container{
+    display: flex;
+}
+.ik1{
+    float: left;
+     width: 300px;
+        height: 400px;
+ 
+}
+.ik{
+    float: right;
+    /* float: inherit; */
+      width: 300px;
+        height: 400px;
+}
+/* clear */
+.nuk1 {
+    float: right;
+    width: 200px;
+    height: 200px;
+
+}
+.nuk2{
+    float: right;
+    
+    width: 200px;
+    height: 200px;
+clear: right;
+}
+
+

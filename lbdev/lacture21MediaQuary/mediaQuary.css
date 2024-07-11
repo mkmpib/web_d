@@ -1,0 +1,78 @@
+/* body{
+    background-color: antiquewhite;
+} */
+ *{
+    padding: 0px;
+    margin:0px;
+ }
+ 
+ 
+.container{
+    background-color: aqua;
+    /* height: 700px;
+    width:1500px; */
+    border:2px double black;
+    margin: 10px;
+}
+.box1{
+    width:200px;
+    height:165px;
+    border:2px solid black;
+}
+#b1{
+    background-color: aquamarine;
+}
+#b2{
+    background-color: azure;
+
+}
+#b3{
+    background-color: blue;
+}
+#b4{
+    background-color: blueviolet;
+}
+/* media quary hmesa css ke nice lgti hai */
+
+ @media screen and (max-width:500px){
+    .container{
+        
+        background-color: cadetblue;
+    }
+    .box1{
+        flex-direction:column;
+        width:400px;
+        margin: 10px;
+        padding: 5px;
+        color: rgb(0, 3, 6);
+    }
+ }
+
+ @media (min-width:501px)and (max-width:834px){
+    .container{
+     background-color: chocolate;
+      display: flex;
+       flex-direction: row;
+       /* flex direction parent div me hi lgani hai */
+    }
+    .box1{
+ 
+       
+        margin: 10px;
+    }
+ }
+ @media (min-width:834px) and (max-width:1295px){
+.container{
+    display: flex;
+    align-items:center;
+     flex-direction: row;
+}
+.box1{
+   
+    width: 500px;
+    height:250px;
+    margin: 10px;
+       
+
+}
+ }

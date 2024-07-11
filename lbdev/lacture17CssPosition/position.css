@@ -1,0 +1,36 @@
+img{
+    height: 300px;
+    width:300px;
+    margin:10px;
+    padding:10px;
+}
+div{
+    border:2px solid black;
+}
+.container{
+    position: relative;
+    height: 8000px;
+}
+/*  by defult postion static hoti hai if we want to move and firsty convert into another postion */
+    /* .imge3{
+        position: relative;
+        top:40px;
+        left:40px;
+    } */
+/* .imge2{
+    position:absolute ;
+    top: 40px;
+    left: 20px;
+   
+} */
+ .imge4{
+    position:fixed;
+ }
+ .box{
+    background-color: yellowgreen;
+    height: 5000px;
+ }
+ .imge3{
+   position: sticky;
+   top: 40px;
+ }

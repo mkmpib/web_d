@@ -1,0 +1,41 @@
+*{
+    padding:0px;
+    margin:0px;
+
+}
+.container{
+    border:5px double black;
+    margin:10px;
+    background-color:antiquewhite;
+    width: 1400px;
+    height:700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box{
+    background-color: aquamarine;
+    width: 400px;
+    height:400px;
+    border: 2px solid blue;
+    text-align: center;
+    /* box shadow */
+/* box-shadow: 10px 10px  rgb(153, 221, 226); */
+/* if you want to blur or light the shadow */
+/* box-shadow:10px 10px 20px black; */
+
+/* spred shadow */
+/* box-shadow: 10px 10px 5px 40px black;
+*/
+
+/* ager box ke ander karni hai shadow */
+/* box-shadow: inset 10px 10px black; */
+
+/* multiple shadow */
+box-shadow: 10px 10px 5px  black,20px 20px 5px red;
+
+}
+#hh{
+    text-shadow: 1px 1px 2px yellow;
+    /* jo box me use kiye sare kr skte h isme */
+}

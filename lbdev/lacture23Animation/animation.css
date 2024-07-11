@@ -1,0 +1,51 @@
+*{
+
+    padding:0px;
+    margin:0px;
+}
+.container{
+
+    border:3px double black;
+    width:100vw;
+    height:100vh;
+    /* ager proer window ka hi size chiye scrool nhi chiye */
+    box-sizing: border-box;
+    background-color:beige;
+}
+.box{
+    height: 100px;
+    width: 300px;
+    border: 2px solid black;
+    border-radius: 5px;
+    margin: 10px;
+    background-color:azure;
+    /* box-shadow: 10px 10px 5px yellow; */
+  position: relative;
+  /* isliye ki postion ki hm isko left right kar ske */
+    /* animaton bnane ke liye uska name */
+    animation-name: rightMovement;
+    animation-duration: 5s;
+    animation-iteration-count: 2;
+    /* animation-delay: 2s; */
+    /* animation-direction: alternate; */
+    animation-fill-mode: forwards;  /* animation ko right side pe hi rokne ke liye */
+    /* animation-timing-function: linear; *//* equal timing from beging to end*/
+    /* animation-timing-function: ease-out; */  /* beging fast ending slow*/
+    /* animation-timing-function: ease-in; */
+    animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+    
+}
+
+/* animation ko bnanen ke steps */
+@keyframes rightMovement {
+    from{
+      top:0;
+      left:0;
+
+    }
+
+    to{
+       top:0;
+        left:1200px;
+   }
+}

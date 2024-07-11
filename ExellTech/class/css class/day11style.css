@@ -1,0 +1,24 @@
+
+/* *{
+
+background-color: rgb(253, 252, 250);
+} */
+
+
+.carousel-inner{
+    img{
+        width: 1000px;
+        height: 600px;
+        border: 2px solid black;
+        
+    }
+    
+
+}
+@media screen and (max-width: 1102px)
+{
+    img{
+         width: 500px;
+    } 
+    
+}

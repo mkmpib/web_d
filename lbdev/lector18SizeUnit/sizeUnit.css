@@ -1,0 +1,41 @@
+.box{
+    border: 2px solid black;
+    background-color: beige;
+    color: aqua;
+}
+.ram{
+    background-color: blanchedalmond;
+    border: 2px solid red;
+    /* if parent width is small  than it efects when we spicfy the size tp child  */
+    width:50%;
+    /* here the ram who has parent take the 50 percent of the screen to display the data */
+}
+.nitu{
+    background-color:aqua;
+    border: 2px solid green;
+    width:40%;
+    /* the nitu takes the 40% of the ram width */
+    /* when we give the width we can see that the parent div unless the child div overlap it */
+}
+.mk{
+    border: 2px solid black;
+
+}
+.rk{
+    border: 2px solid black;
+    font-size:4em;
+    /* the size will multiply with the mk font size you can cheak using the inspact */
+}
+.muni{
+    border: 2px solid black;
+width: 100vh;
+/* it takes 100 % of window height */
+height: 100vh;
+
+}
+.deepu{
+    border: 3px solid red;
+    width: 100vh;
+    /* it takes 70% of muni view port hieght */
+    height: 70vh;
+}

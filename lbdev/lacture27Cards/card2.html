@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>card2</title>
+    <style>
+      * {
+        padding: 0px;
+        margin: 0px;
+        box-sizing: border-box;
+      }
+      .container {
+        background-image: linear-gradient(90deg, #e3ffe7 0%, #dbe8ff 100%);
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .box {
+        /* border: 2px solid rgba(32, 31, 31, 0.766); */
+        height: 580px;
+        width: 350px;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        gap: 30px;
+        background-color: white;
+      }
+      .box img {
+        height: 200px;
+        width: 100%;
+        border-top-left-radius: 18px;
+        border-top-right-radius: 18px;
+      }
+      .annual {
+        background-color: #dbe8ff;
+        width: 80%;
+        border-radius: 10px;
+        display: flex;
+        justify-content: space-between;
+        /* margin: 3px; */
+        padding: 10px;
+      }
+      .logo {
+        display: flex;
+        /* padding: 10px; */
+        gap: 10px;
+      }
+      .logo img {
+        height: 30px;
+        width: 30px;
+      }
+      button{
+        border-radius: 10px;
+        height:32px;
+        width: 80%;
+        background-color: rgb(29, 29, 81);
+        color: aliceblue;
+        box-shadow: 0px 2px 15px rgb(30, 28, 28);
+      }
+      .para{
+        margin-left: 20px;
+        margin-right: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box">
+        <img
+          src="https://cdn.pixabay.com/photo/2024/06/01/19/24/ai-generated-8802964_960_720.png"
+          alt=""
+        />
+        <h2>Music Summery</h2>
+        <p class="para">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio natus
+          molestias, architecto in quam illo cum voluptate numquam magni
+          commodi?
+        </p>
+        <div class="annual">
+          <div class="logo">
+            <img
+              src="https://cdn-icons-png.flaticon.com/128/7566/7566380.png"
+              alt=""
+            />
+            <p>Annual Plan <br>$99.9/year</p>
+          </div>
+          <a href="#">Change</a>
+        </div>
+        <button>Proceed To Payment</button>
+        <a href="#" style="text-decoration: none;">Cancel Order</a>
+      </div>
+    </div>
+  </body>
+</html>

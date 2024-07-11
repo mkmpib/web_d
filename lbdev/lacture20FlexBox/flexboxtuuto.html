@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>flex</title>
+    <style>
+      * {
+        padding: 0px;
+        margin: 0px;
+      }
+      .container {
+        border: 3px double black;
+        background-color: bisque;
+        height: 800px;
+        /* width: 210px; */
+        display: flex;
+        justify-content: space-evenly;
+        margin: 10px;
+      }
+      .box {
+        height: 200px;
+        width: 200px;
+        margin: 10px;
+        padding: 10px;
+      }
+      #box1 {
+        background-color: aliceblue;
+        border: 1px solid black;
+       /* jab screen choti karge to jaldi hoga box 1 ka size chota  */
+        flex-shrink: 10;
+      }
+      #box2 {
+        border: 1px solid black;
+        background-color: antiquewhite;
+        /* jab screen ka size bda karege to jaldi hoga bda size */
+        /* flex-grow: 10; */
+      }
+      #box3 {
+        border: 1px solid black;
+        background-color: aqua;
+        order: 4;
+        /* muni val box 4th position pe cle jayega */
+      }
+      #box4 {
+        border: 1px solid black;
+        background-color: aquamarine;
+        
+        /* center me cle jage container tag ke  */
+        align-self:end;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box" id="box1">mohit</div>
+      <div class="box" id="box2">deepak</div>
+      <div class="box" id="box3">rohit</div>
+      <div class="box" id="box4">muni</div>
+    </div>
+  </body>
+</html>

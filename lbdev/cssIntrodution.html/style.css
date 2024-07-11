@@ -1,0 +1,25 @@
+
+*{
+    padding: 2px;
+}
+h1{
+    text-align:center;
+    font-size: xx-large;
+}
+p{
+    background-color: black;
+}
+#ram{
+    color: rgb(230, 234, 238);
+    background-color: green;
+}
+
+.para{
+    background-color: blanchedalmond;
+    color: rgb(175, 22, 22); 
+   
+}
+h1,p,h2{
+    border:1px solid black;
+    width:800px;
+}

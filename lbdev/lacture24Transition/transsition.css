@@ -1,0 +1,26 @@
+*{
+    padding: 0px;
+    margin:0px;
+}
+.box{
+    background-color: antiquewhite;
+    border: 2px solid black;
+    height: 300px;
+    width:400px;
+    margin:20px;
+    /* transition-property: all; 
+     /* sab pe apply hogi height width border*/
+    /* transition-property: width; */
+   /* transition-duration: 4s;
+    transition-delay: 1s;
+    transition-timing-function: linear; 
+    */
+
+    /* shorthand notation */
+    transition: all 2s ease-in;
+}
+.box:hover{
+    width: 1000px;
+    height:500px;
+    background-color: aqua;
+}
