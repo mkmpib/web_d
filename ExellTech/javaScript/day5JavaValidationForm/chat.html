@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Validation Form</title>
+    <link rel="stylesheet" href="validationForm.css" />
+  </head>
+  <body>
+    <form id="form" onsubmit="return validation()">
+      <label>Enter The User Name</label><br />
+      <input type="text" id="use" placeholder="Name" /><br />
+      <span id="userr" style="color: red;"></span><br /><br />
+
+      <label>Enter The Password</label><br />
+      <input type="password" id="pas" placeholder="Password" /><br />
+      <span id="passerr" style="color: red;"></span><br /><br />
+
+      <label>Confirm The Password </label><br />
+      <input type="password" id="cpas" placeholder="Confirm Password" /><br />
+      <span id="cpaserr" style="color: red;"></span><br /><br />
+
+      <label>Enter Your Email Id</label><br />
+      <input type="email" id="ema" placeholder="absd@gmail.com" /><br />
+      <span id="emaerr" style="color: red;"></span><br /><br />
+
+      <label>Enter Your Mobile Number</label><br />
+      <input type="tel" id="num" placeholder="Phone Number" /><br />
+      <span id="numerr" style="color: red;"></span><br /><br />
+
+      <input type="submit" value="Submit" /><br />
+    </form>
+
+    <script>
+      function validation() {
+        var isValid = true;
+
+        var name = document.getElementById("use").value;
+        var pass = document.getElementById("pas").value;
+        var cpass = document.getElementById("cpas").value;
+        var emai = document.getElementById("ema").value;
+        var numb = document.getElementById("num").value;
+
+        document.getElementById("userr").innerHTML = "";
+        document.getElementById("passerr").innerHTML = "";
+        document.getElementById("cpaserr").innerHTML = "";
+        document.getElementById("emaerr").innerHTML = "";
+        document.getElementById("numerr").innerHTML = "";
+
+        if (name.trim() === "") {
+          document.getElementById("userr").innerHTML = "Please enter the name";
+          isValid = false;
+        } else if (!isNaN(name)) {
+          document.getElementById("userr").innerHTML = "Name must be characters";
+          isValid = false;
+        } else if (name.length < 5 || name.length > 20) {
+          document.getElementById("userr").innerHTML = "Name should be 5 to 20 characters long";
+          isValid = false;
+        }
+
+        if (pass.trim() === "") {
+          document.getElementById("passerr").innerHTML = "Please enter the password";
+          isValid = false;
+        } else if (pass.length < 6) {
+          document.getElementById("passerr").innerHTML = "Password should be at least 6 characters long";
+          isValid = false;
+        }
+
+        if (cpass.trim() === "") {
+          document.getElementById("cpaserr").innerHTML = "Please confirm the password";
+          isValid = false;
+        } else if (cpass !== pass) {
+          document.getElementById("cpaserr").innerHTML = "Passwords do not match";
+          isValid = false;
+        }
+
+        if (emai.trim() === "") {
+          document.getElementById("emaerr").innerHTML = "Please enter the email";
+          isValid = false;
+        } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emai)) {
+          document.getElementById("emaerr").innerHTML = "Please enter a valid email";
+          isValid = false;
+        }
+
+        if (numb.trim() === "") {
+          document.getElementById("numerr").innerHTML = "Please enter the phone number";
+          isValid = false;
+        } else if (!/^\d{10}$/.test(numb)) {
+          document.getElementById("numerr").innerHTML = "Phone number must be 10 digits long";
+          isValid = false;
+        }
+
+        return isValid;
+      }
+    </script>
+  </body>
+</html>

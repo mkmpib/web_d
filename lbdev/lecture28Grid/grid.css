@@ -11,6 +11,8 @@ body{
     height: 100%;
     width: 100%;
     background-color: rgb(238, 238, 157);
+    text-align: center;
+    font-size: large;
      padding: 4rem;
 
 
@@ -18,12 +20,21 @@ body{
     /* grid se box shape me aa jayege or height bhi badi ho jayegi  and hum grid ki properties ka use kar ske isliye grid ko cintainer me hi likh diya hai*/
     display: grid;
    
-    /* grid ki property hai (row-gap) */
+    /* grid ki property hai for giving the gaps in row  (row-gap) */
     row-gap:1rem;
+
+
     column-gap: 1rem;
     /* to convert in the form of row and column */
-    grid-template-rows:200px 200px;
-    grid-template-columns: 200px 200px 200px;
+    /* grid-template-rows:200px 200px;give the size to row and coulmn  */
+    /* we use fr unit to mske it responsive */
+    /* grid-template-rows: 1fr 1fr; */
+    /* another way to give fr unit suppose we need to give 100  fr unit so what we use to below mwthod */
+    grid-template-rows: repeat(2,1fr);
+    /* grid-template-columns: 200px 200px 200px; */
+    /* same we use in column */
+    /* grid-template-columns: 1fr 1fr 1fr */
+    grid-template-columns:  repeat(3,1fr);
 
 }
 .item{

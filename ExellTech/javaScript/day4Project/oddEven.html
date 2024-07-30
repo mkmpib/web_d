@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OddEven</title>
+    <style>
+         .container{
+            background-color: antiquewhite;
+            border: 2px solid black;
+            height: 300px;
+            width: 100vw;
+          text-align: center;
+          padding-top: 60px;
+        }
+        button{
+            background-color: aqua;
+            width:400px;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <label>Enter The Number:</label>
+      <input type="text" id="first" /><br /><br />
+
+      <button onclick="check()">Submit</button><br><br>
+      <div id="result"></div><!--Result iski vjaaa se show ho raha hai  -->
+    </div>
+    <script>
+      function check() {
+        let a = document.getElementById("first").value;
+      
+        if (a % 2 == 0) {
+          document.getElementById("result").innerHTML = "Even";
+        } else {
+          document.getElementById("result").innerHTML = "Odd"; 
+        }
+        //   document.getElementByID("result").innerHTML = "Odd";
+      }
+    </script>
+  </body>
+</html>

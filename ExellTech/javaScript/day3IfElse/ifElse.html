@@ -1,0 +1,28 @@
+
+<!-- WAP to take the input form user for marks and give output that he is passed or not -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>If else</title>
+  </head>
+  <body>
+    <script>
+      let marks = prompt("Emter the marks:");
+      if (marks <= 32) {
+        document.write("You  Fail in exam");
+      }else if(marks>=33 && marks<=69){
+        document.write("You passes The exam");
+      }else if(marks>=70 && marks<=89){
+        document.write("You passed with C grade.");
+      }else if(marks>=80 && marks<=89){
+        document.write("You passed with B grade.");
+      }else if(marks>=90 && marks<=100){
+        document.write("You passed with A grade.");
+      }else{
+        document.write("Wrong input");
+      }
+    </script>
+  </body>
+</html>

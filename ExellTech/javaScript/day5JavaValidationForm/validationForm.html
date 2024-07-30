@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Validiation Form</title>
+    <link rel="stylesheet" href="validationForm.css" />
+    <!-- font awesome cdn link -->
+    <link rel="stylesheet" />
+  </head>
+  <body>
+    <form onsubmit="event.preventDefault();validation()" id="form">
+      <h1>SIGN UP</h1>
+      <!-- user name -->
+      <label>Enter The User Name</label><br />
+      <input
+        type="text"
+        id="use"
+        placeholder="Name"
+        required
+        autocomplete="off"
+      /><br />
+
+      <span id="userr"></span><br /><br />
+
+      <!-- password -->
+      <label>Enter The Password</label><br />
+      <input type="password" id="pas" placeholder="Password" /><br /><br />
+      <span id="passer"></span><br /><br />
+
+      <!-- confirm password -->
+      <label>Confirm The Password </label><br />
+      <input type="password" id="cpas" placeholder="Password" /><br /><br />
+      <span id="cpasser"></span><br /><br />
+
+      <!-- email id -->
+      <label>Enter Your Email Id</label><br />
+      <input type="gmail" id="ema" placeholder="absd@gmail.com" /><br /><br />
+      <span id="emailer"></span><br /><br />
+
+      <!-- mobile number -->
+      <label>Enter Your Mobile Number</label><br />
+      <input type="number" id="num" placeholder="Phone Number" /><br /><br />
+      <span id="mobile"></span><br />
+
+      <!-- submit button -->
+      <input type="submit" id="submitt" /><br />
+    </form>
+
+    <script>
+      function validation() {
+        var isValid = true;
+
+        // contecting the input ids
+        var name = document.getElementById("use").value;
+        var pass = document.getElementById("pas").value;
+        var cpass = document.getElementById("cpas").value;
+        var emai = document.getElementById("ema").value;
+        var numb = document.getElementById("num").value;
+        // span ids
+        var userr = (document.getElementById("userr").innerHTML = " ");
+        var passer = (document.getElementById("passer").innerHTML = " ");
+        var cpasser = (document.getElementById("cpasser").innerHTML = " ");
+        var emailer = (document.getElementById("emailer").innerHTML = " ");
+        var mobile = (document.getElementById("mobile").innerHTML = " ");
+
+        // user validation
+        if (name == "") {
+          document.getElementById("userr").innerHTML = "Please enter the name";
+          isValid = false;
+        } else if (!isNaN(name)) {
+          document.getElementById("userr").innerHTML =
+            "Name  must be characters";
+          isValid = false;
+        } else if (name.length < 5 || name.length > 20) {
+          document.getElementById("userr").innerHTML =
+            "Name should be 5 to 20 characters long";
+          isValid = false;
+        }
+
+        // password validation
+
+        if (pass == "") {
+          document.getElementById("passer").innerHTML =
+            "Please enter the password";
+          isValid = false;
+        } else if (pass.length < 6) {
+          document.getElementById("passer").innerHTML =
+            "Password should be at least 6 characters long";
+          isValid = false;
+        }
+
+        // confirm password
+
+        if (cpass == "") {
+          document.getElementById("cpasser").innerHTML =
+            "Please Confirm Your Password";
+          isValid = false;
+        } else if (cpass != pass) {
+          document.getElementById("cpasser").innerHTML =
+            "Your confirm password does not match with your password";
+          isValid = false;
+        }
+
+        // email
+
+        if (emai == "") {
+          document.getElementById("emailer").innerHTML =
+            "Please Enter the Email";
+          isValid = false;
+        } else if (!emai.includes("@")) {
+          document.getElementById("emailer").innerHTML =
+            "Please Enter the  valid Email";
+          isValid = false;
+        } else if(emai.indexOf('@')<=0){
+          document.getElementById("emailer").innerHTML="Invalid Position Of @";
+          isValid=false;
+        }
+
+        // number
+
+        if (numb == "") {
+          document.getElementById("mobile").innerHTML =
+            "Please Enter the Number";
+          return false;
+        } else if (isNaN(numb)) {
+          document.getElementById("mobile").innerHTML =
+            "Number  must be integer";
+          return false;
+        } else if (numb.length <= 10) {
+          document.getElementById("mobile").innerHTML =
+            "Number should be at least 10 characters long";
+          return false;
+        }
+      }
+    </script>
+  </body>
+</html>

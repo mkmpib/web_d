@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>table</title>
+    <style>
+      .contain {
+        background-color: rgb(244, 213, 182);
+        border: 2px solid black;
+        border-radius: 10px;
+        height: 600px;
+        width: 400px;
+        text-align: center;
+        padding-top: 60px;
+        margin: 50px auto;
+      }
+      #submitt {
+        background-color: rgb(102, 102, 238);
+        border: 2px solid black;
+        border-radius: 10px;
+        padding: 5px;
+        width: 120px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <form onsubmit="tablePrint()">
+      <label>Enter The Number Whoose You want table</label>
+      <input type="number" id="tbl" /><br /><br />
+      <input type="submit" id="submitt" />
+      <span id="div1"></span>
+    </form>
+
+    <script>
+      function tablePrint() {
+        var input = document.getElementById("tbl").value;
+        // var div1 = (document.getElementById("div1").innerHTML = "");
+        // var n = input;
+        for (let x = 1; x <= 10; x++) {
+          let p = input * x;
+          document.getElementById("div1").innerHTML = p;
+          //   document.write(p + "<br>");
+        }
+      }
+    </script> -->
+    <div class="contain">
+      <label>Enter the number whoose you want the table:</label><br>
+      <input type="number" id="numbr" /><br><br>
+      <input type="submit" onclick="printTable()" id="submitt" >
+      <div id="output"></div>
+</div>
+      <script>
+        function printTable() {
+         
+          var input = document.getElementById("numbr").value; // for connecting with input type
+         output.innerHTML="";
+          for (let x = 1; x <= 10; x++) {
+            let p = input * x;
+           output.innerHTML +=input+"*"+x+"="+ p+"<br>";
+            // document.write(p + "<br>");
+          }
+        }
+      </script>
+    
+  </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Constructor</title>
+
+</head>
+<body>
+    <!-- constuctor by default call hote hai inlo bina . lagye hi clll ho jayega -->
+    <script>
+    
+        class balak{
+            constructor(){
+             console.log("Welcome in our page!")
+            }
+        }
+        // by default call hoga ye
+        let vidyarthi=new balak();
+
+        class student{
+            constructor(name ,age,gender){
+            this.stuName=name;
+            this.stuAge=age;
+            this.stuGender=gender;
+            }
+            biodata(){
+                console.log("The name of student is:"+this.stuName+"\n" +"The age of student is:"+this.stuAge+"\n"+"The gender of the student is:"+this.stuGender+"\n");
+            }
+        }
+        let stu1=new student('mohit',12,'Male');
+        stu1.biodata();
+        let stu2=new student('Abhishek',12,'Male');
+        stu2.biodata();
+        let stu3=new student('Yuvraj',0,'Female');
+        stu3.biodata();
+    </script>
+</body>
+</html>

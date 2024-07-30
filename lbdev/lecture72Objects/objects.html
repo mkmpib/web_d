@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects</title>
+</head>
+<body>
+    <script>
+        // objects literals also known as object initilizer
+
+        const student={
+            stdId:101,
+            stdName:"Mohit",
+            stdAge:13,
+            2:"female", // property name may be number,string,identifier
+            "color":"black",
+            lastLoginDays:["Monday","tuesday"],
+
+        };
+
+        // calling
+        //first way
+        console.log(student.stdName);
+        console.log(student.color);
+        console.log(student.stdAge);
+        //second way
+        console.log(student[2]);//calling the number and getting value 'female'
+        console.log(student['lastLoginDays']);
+
+      // changing the values
+      student.stdName="Muni";
+    
+      console.log(student['stdName']);
+
+      //to frezze the changes
+      Object.freeze(student);
+       student.stdName="Deeepak";
+       console.log(student); // value of name is muni
+
+
+
+
+
+        // using symbol and add into object and print
+
+        const muSymbol=Symbol("key1");// declation  of symbol
+        const user={
+            userId:101,
+            // muSymbol:"myKey1",
+            //if we want to use it as a symbol then take it into []
+            [muSymbol]:"myKey1",
+        }
+        console.log(user.muSymbol);//mykey1
+        // console.log(typeof user.muSymbol);//string
+        console.log(user[muSymbol]);
+        
+    </script>
+</body>
+</html>

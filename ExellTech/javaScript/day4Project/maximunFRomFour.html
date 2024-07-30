@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Maximum Number</title>
+    <style>
+      .container {
+        background-color: antiquewhite;
+        border: 2px solid black;
+        height: 300px;
+        width: 100vw;
+        text-align: center;
+        padding-top: 60px;
+      }
+      button {
+        background-color: aqua;
+        width: 400px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <label>Enter The First Number:</label>
+      <input type="number" id="first" /><br /><br />
+      <label>Enter The Second Number</label>
+      <input type="number" id="second" /><br /><br />
+      <label>Enter The Third Number</label>
+      <input type="number" id="third" /><br /><br />
+      <label>Enter The Fourth Number</label>
+      <input type="number" id="fourth" /><br /><br />
+
+      <button onclick="maximum()">Submit</button><br /><br />
+      <div id="result"></div>
+      <!--Result iski vjaaa se show ho raha hai  -->
+    </div>
+    <script>
+      function maximum() {
+        let a = parseInt(document.getElementById("first").value);
+        let b = parseInt(document.getElementById("second").value);
+        let c = parseInt(document.getElementById("third").value);
+        let d = parseInt(document.getElementById("fourth").value);
+        if (a > b && a > c && a > d) {
+          document.getElementById("result").innerHTML = "A" + " " + a;
+        } else if (b > a && b > c && b > d) {
+          document.getElementById("result").innerHTML = "B" + " " + b;
+        } else if (c > a && c > b && c > d) {
+          document.getElementById("result").innerHTML = "C" + " " + c;
+        } else {
+          document.getElementById("result").innerHTML = "D" + " " + d;
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inheritence</title>
+</head>
+<body>
+    <script>
+        class student{
+            constructor(name,age){
+                this.stuName=name;
+                this.stuAge=age;
+            }
+            biodata(){
+                console.log("The name of the student is: "+this.stuName+"\n"+"The age of student is:"+this.stuAge+"\n");
+            }
+        }
+// hobby class
+        class hobby extends student{
+            constructor(name,age,game){
+                super(name,age,game)
+                this.stuGame=game;
+
+            }
+            biodata(){
+         console.log("The name of the student is: "+this.stuName+"\n"+"The age of student is:"+this.stuAge+"\n"+"The fav game is: "+this.stuGame+"\n");
+
+            }
+        }
+// dance
+  class dancer extends student{
+            constructor(name,age,dance){
+                super(name,age,dance)
+                this.stuDance=dance;
+
+            }
+            biodata(){
+         console.log("The name of the student is: "+this.stuName+"\n"+"The age of student is:"+this.stuAge+"\n"+"The student Who like dance: "+this.stuDance+"\n");
+
+            }
+        }
+        // gender
+        // dance
+  class singing extends student{
+            constructor(name,age,dance,sing){
+                super(name,age,dance,sing)
+                this.stuDance=dance;
+                this.stuSing=sing;
+
+            }
+            biodata(){
+         console.log("The name of the student is: "+this.stuName+"\n"+"The age of student is:"+this.stuAge+"\n"+"The student Who like dance: "+this.stuDance+"\n"+"The  student is like singing:"+this.stuSing+"\n");
+
+            }
+        }
+ 
+        // calling
+        let balak=new student('Mohit',22);
+        balak.biodata();
+        let balak1=new hobby('yuvraj',20,'football');
+        balak1.biodata();
+          let balak2=new dancer('abhishek',220,'disko');
+        balak2.biodata();
+          let balak3=new singing('abhishek',220,'disko','himachali');
+        balak3.biodata();
+    </script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cube Of NUmber</title>
+    <style>
+      .container {
+        border: 3px double black;
+        border-radius: 10px;
+        height: 500px;
+        width: 400px;
+        background-color: antiquewhite;
+        color: rgb(9, 194, 86);
+        margin: 50px auto;
+        padding: 10px;
+        text-align: center;
+      }
+      #sub {
+        border: 2px solid black;
+        width: 100px;
+        border-radius: 6px;
+        background-color: rgb(218, 218, 91);
+        padding: 4px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <label>Enter The Number For Range Of The Cube</label><br /><br />
+      <input type="number" id="num" /><br /><br />
+      <input type="submit" onclick="cube()" id="sub" />
+      <div id="box"></div> <!-- ager class likhege tb nhi calega code   -->
+    </div>
+    <script>
+      function cube() {
+        var cub = document.getElementById("num").value;
+        var box = document.getElementById("box");
+        box.innerHTML = "";
+        for (let i = 1; i <= cub; i++) {
+          let ans =  i*i*i;
+          box.innerHTML += ans+("<br>");
+        }
+      }
+
+    // for (let i = 1; i <= 10; i++) {
+    //       let ans =  i*i*i;
+    //       console.log(ans);
+    //     }
+
+      
+    </script>
+  </body>
+</html>

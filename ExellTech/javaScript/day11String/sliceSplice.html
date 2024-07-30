@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>replace element</title>
+  </head>
+  <body>
+    <script>
+        // slice
+      let  text = ["a", "b", "c", "d"];
+     let result= text.slice(1,2);// first vala bhi remove karne ke liye h 1 index se phle remove kr dega// second vala paramiter remove krne ke liye hai 2 index ke baad remove kr dega
+     console.log(result);
+      console.log(text);
+
+
+    //splice
+    // let text =["a","b","c","d","e"];
+    // let result=text.splice(0,3,"f"); // {0} kis jga pe replace karna h//{3} index 3 or uske baad sab remove kr dena hai//{"f"} jo value replace kr ke likhni hia
+    // console.log(result);
+    // console.log(text);
+
+    let fruits = ["Apple", "Banana", "Cherry", "Orange"];
+let removed = fruits.splice(0, 1); // Removes 2 elements starting from index 1
+console.log(fruits); // Outputs: ["Apple", "Orange"]
+console.log(removed); // Outputs: ["Banana", "Cherry"]
+
+
+
+
+
+    </script>
+  </body>
+</html>

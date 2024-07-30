@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //singleton object h
+        const tinderUser = new Object();  
+        console.log( tinderUser); //{}
+
+
+        // non singleton
+        // const tinder = { userId:"mohit",userName:"mohit"};
+        const tinder = { };
+        tinder.id='123abc';
+        tinder.name="mohit";
+        tinder.isLoggedIn=false;
+         console.log( tinder); //{}
+       
+    
+       // nesting Objects
+
+       const regularUser={
+          email:"mkmpib@gmail.com",
+          fullName:{
+            UserFullName:{
+                firstName:"Mohit",
+                lastName:"kumar"
+            }
+          }
+       }
+        console.log(regularUser);
+        console.log(regularUser.fullName.UserFullName.firstName);
+
+
+        // geting the keys of object
+        console.log(tinder);
+        console.log(Object.keys(tinder));
+        
+        // geting the keys of object
+        console.log(Object.values(tinder));
+
+        //it return values in arrya
+        console.log(Object.entries(tinder));
+
+        //cheaking value available or not
+        console.log(tinder.hasOwnProperty('isLoggedIn'))  //trued
+    </script>
+</body>
+</html>

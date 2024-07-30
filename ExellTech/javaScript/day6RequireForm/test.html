@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Validiation Form</title>
+    <link rel="stylesheet" href="test.css" />
+    <!-- font awesome cdn link -->
+    <script src="test.js"></script>
+  </head>
+  <body>
+    
+    <div class="container">
+        <div class="tabb"> 
+          <table  border="2px solid black">
+      <tr>
+        <th>User Name</th>
+        <th>Email Id</th>
+        <th>Phone Number</th>
+      </tr>
+      <tr>
+        <td id="nm">Input First</td>
+        <td id="em">Input First</td>
+        <td id="nmb">Input First</td>
+      </tr>
+     
+    </table></div>
+        <div class="formm"> <form  action ="takevalue()"onsubmit="event.preventDefault();validation()" id="form">
+      <h1>SIGN UP</h1>
+      <!-- user name -->
+      <!--  if we use require then validation form does not show all valid fields   -->
+      <label>Enter The User Name</label><br />
+      <input
+        type="text"
+        id="use"
+        placeholder="Name"
+        required
+        autocomplete="off"
+      /><br />
+
+      <span id="userr"></span><br /><br />
+
+      <!-- password -->
+      <label>Enter The Password</label><br />
+      <input
+        type="password"
+        id="pas"
+        placeholder="Password"
+        required
+      /><br /><br />
+      <span id="passer"></span><br /><br />
+      <span id="puser"></span>
+
+      <!-- confirm password -->
+      <label>Confirm The Password </label><br />
+      <input
+        type="password"
+        id="cpas"
+        placeholder="Password"
+        required
+      /><br /><br />
+      <span id="cpasser"></span><br /><br />
+
+      <!-- email id -->
+      <label>Enter Your Email Id</label><br />
+      <input
+        type="gmail"
+        id="ema"
+        placeholder="absd@gmail.com"
+        required
+      /><br /><br />
+      <span id="emailer"></span><br /><br />
+
+      <!-- mobile number -->
+      <label>Enter Your Mobile Number</label><br />
+      <input
+        type="number"
+        id="num"
+        placeholder="Phone Number"
+        required
+      /><br /><br />
+      <span id="mobile"></span><br />
+
+      <!-- submit button -->
+      <input type="submit" id="submitt" /><br />
+    </form></div>
+    </div>
+   
+   
+
+    
+  </body>
+</html>

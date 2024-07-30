@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Multiple</title>
+    <style>
+      .container {
+        background-color: antiquewhite;
+        border: 2px solid black;
+        height: 300px;
+        width: 100vw;
+        text-align: center;
+        padding-top: 60px;
+      }
+      button {
+        background-color: aqua;
+        width: 400px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <label>Enter The  Number:</label>
+      <input type="number" id="first" /><br /><br />
+
+      <button onclick="multiple()">Submit</button><br /><br />
+      <div id="result"></div>
+      <!--Result iski vjaaa se show ho raha hai  -->
+    </div>
+    <script>
+      function multiple() {
+        let a = document.getElementById("first").value;
+
+        if (a % 3 == 0 && a % 5 == 0) {
+          document.getElementById("result").innerHTML = "FIZZ & BIZZ";
+        } else if (a % 5 == 0) {
+          document.getElementById("result").innerHTML = "Bizz";
+        } else if (a % 3 == 0) {
+          document.getElementById("result").innerHTML = "FIZZ";
+        } else {
+          document.getElementById("result").innerHTML = "INVALID INPUT";
+        }
+      }
+    </script>
+  </body>
+</html>

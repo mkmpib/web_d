@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>variable</title>
+</head>
+<body>
+  <script>
+   
+    //  var variable
+    var age=34; /// globlaly available
+    if(true){
+        console.log(age);
+    }
+
+    // fuction me declare karege to function me hi clega or globally acces nhi kar skte
+    function ram(){
+         var id =57;
+         console.log(id);
+    }
+    // console.log(id); // eroor ayega jb tak isko call nhi karayege
+
+    ram();// ab  call hogi cal pdega
+
+    // redeclaring of variable
+    var x=34;
+    var x=56; // we can we declare it and it return the 56 value here
+   console.log(x);
+
+    // let is a block scope iski range block or {} ke bich me hi hoti hai
+    // {
+    //     let a=10;
+    //     console.log(a);  //ab nhi aayega error
+    // }
+    // // document.write(a); kuch bhi nhi show hoga kyoki ye blocke scope hai we cant acces it 
+    // console.log(a);   //  error aayega  console pannel me 
+
+
+    // redeclation
+    let n=45;
+    // let n=89; // goves the erroer that a is declare already
+
+    //re assign is available
+    let k=78;
+     k=789;
+     // its givs us 789 value
+
+    //dynamically scoped language
+    k="mohit";
+    a = true;
+    a= null;
+    console.log(k); // gies the value in string
+
+    //const
+    const m=678;
+    const MohitKumar=456;
+    // m=8907; // gives the error that m is constant value
+  </script>  
+</body>
+</html>

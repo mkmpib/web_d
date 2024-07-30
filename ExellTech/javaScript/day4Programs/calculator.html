@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <style>
+      .container {
+        background-color: antiquewhite;
+        border: 2px solid black;
+        height: 300px;
+        width: 100vw;
+        text-align: center;
+        padding-top: 60px;
+      }
+      button {
+        background-color: rgb(185, 231, 59);
+        width: 50px;
+        padding: 3px;
+      }
+      .sub {
+        background-color: aqua;
+        width: 400px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <label>Enter The Number</label>
+      <input type="number" id="first" /> <br /><br />
+
+      <label>Enter The Number</label>
+      <input type="number" id="second" /><br /><br />
+      <label>ANSWER</label>
+      <input type="number" id="ans" /><br /><br />
+
+      <button onclick="add()">+</button>
+      <button onclick="minus()">-</button>
+      <button onclick="multiply()">*</button>
+      <button onclick="divide()">%</button><br /><br />
+
+      <div id="result"></div>
+    </div>
+
+    <script>
+       function add() {
+         var a = parseInt(document.getElementById("first").value);
+         var b = parseInt(document.getElementById("second").value);
+         var ans1 = a + b;
+         document.getElementById("ans").value = ans1;
+       }
+       function minus() {
+         var a=parseInt(document.getElementById("first").value);
+         var b=parseInt(document.getElementById("second").value);
+         var ans1= a - b;
+         document.getElementById("ans").value=ans1;
+       }
+       function multiply() {
+       
+        var a=parseInt(document.getElementById("first").value);
+        var b=parseInt(document.getElementById("second").value);
+        var ans1=a*b;
+        document.getElementById("ans").value=ans1;
+       }
+       function divide() {
+      var a=parseInt(document.getElementById("first").value);
+      var b=parseInt(document.getElementById("second").value);
+      var ans1=a/b;
+      document.getElementById("ans").value=ans1;
+
+       }
+    </script>
+  </body>
+</html>

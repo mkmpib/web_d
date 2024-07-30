@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counting</title>
+    <style>
+         #container {
+        border: 3px double black;
+        border-radius: 10px;
+        height: 500px;
+        width: 400px;
+        background-color: antiquewhite;
+        color: rgb(9, 194, 86);
+        margin: 50px auto;
+        padding: 10px;
+        text-align: center;
+      }
+      #sub {
+        border: 2px solid black;
+        width: 100px;
+        border-radius: 6px;
+        background-color: rgb(218, 218, 91);
+        padding: 4px;
+      }
+    </style>
+</head>
+<body>
+<div id="container">
+    <label for="">Enter the for Range of Numbers</label><br><br>
+    <input type="number" id="num"><br><br>
+    <input type="submit" id="sub" onclick="count()">
+    <div id="main"></div>
+    <div id="mk"></div>
+</div>
+
+
+    <script>
+        function count(){
+            let countt=0;
+ var range=document.getElementById("num").value;
+        var main=document.getElementById("main");
+        var mk=document.getElementById("mk");
+        main.innerHTML="";
+for(let i=1;i<=range;i++){
+    
+    main.innerHTML+=i;
+   
+    
+
+}
+h
+        }
+       
+    </script>
+</body>
+</html>
