@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Immidiate invoke a function</title>
+</head>
+<body>
+    <script>
+        function chai(){
+
+            console.log(`Muni is not a girl`)
+        }
+         chai();//first way 
+
+        // for immidiate invokong
+     // ()()
+        (function muni(){
+            console.log(`muni is boy`)
+        })(); //dusre finction ko calne ke liye ; lgana pdega
+
+
+          (function muni2(){
+            console.log(`muni is not boy`)
+        })();
+
+        // by arrow mwthod
+        ( ()=>{
+            console.log(`mohit`);
+        })();
+
+        // argument pass krna hai
+         ( (name)=>{
+            console.log(`mohit ${name}`);
+        })('kala');
+
+    </script>
+</body>
+</html>

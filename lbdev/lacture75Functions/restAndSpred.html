@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rest</title>
+</head>
+<body>
+    <script>
+        // ... opertor
+        // function calculateCartPrice(...num1){
+        function calculateCartPrice(val1,val2,...num1){
+
+            return num1;
+        }
+        console.log(calculateCartPrice(200));// jab val1 vala function ayega to empty array return hoga
+        console.log(calculateCartPrice(200,300,400,5000)); // for this we use rest(... )operator in function parameteres
+      
+
+        // using object in function
+        const user={
+            username:"hitesh",
+            price:199,
+        };
+
+        function handleObject(anyObject){
+            console.log(`user name is: ${anyObject.username }\n the ptice is:${anyObject.price}`);
+        }
+        handleObject(user);  // object ka name pass  kerna pdega
+
+        // second way to pass object
+        handleObject({
+            username:"mohit",
+            price:1567,
+        })
+
+        // passsing array in function
+
+        let array=[100,200,300,400];
+        function returnSecondValueOfArr(getArr){
+            return getArr[1];
+        }
+        console.log(returnSecondValueOfArr(array));
+        console.log(returnSecondValueOfArr([1,2,3,4]));
+   </script>
+</body>
+</html>

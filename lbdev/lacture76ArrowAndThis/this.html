@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>this</title>
+</head>
+<body>
+    
+    <script>
+
+        // this jo current context me value hai usko print(fatch) karne ka kamm karta hai
+        const user={
+            username:"hitesh",
+            price:999,
+
+            welcomeMessage:function(){
+                console.log(`${this.username},Welcome to website`);
+                console.log(this);
+            }
+        }
+
+        // user.welcomeMessage();
+        // user.username="Mohit";
+        // user.welcomeMessage();
+        console.log(this);  // empty string return krta hai ya fir window ke bare
+
+
+        function chai(){
+            // console.log(this);
+            let userName="ram";
+            console.log(this.userName); //  undefine ayega
+
+        }
+        chai();
+
+    </script>
+</body>
+</html>

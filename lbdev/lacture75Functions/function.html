@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function</title>
+</head>
+<body>
+    <script>
+        function student(){
+         
+           console.log("mohit") 
+        }
+        student();//parameter arguments
+        student; // is se calling nhi hogi ye to reference de raha hai or bta raha hai ki fuvtion hai
+
+
+        // adding two numbers
+        function sum(number1,number2){
+            console.log(number1+number2);//NaN return (not a number)
+
+        }
+        sum();  // if we dont give argument it return NaN
+        sum(3,4);  //7
+        sum(3,"4"); // its simply return (34) becuse it didt know the data type of arguments
+        sum(3,null); //3
+
+
+        function subtract(num1,num2){
+            // let result=num1-num2;
+            // return result;
+            return num1-num2;
+            console.log("mohit"); // koi output nhi ayegi kyoki ye return ke baad ki values ko nhi leta hai
+        }
+        subtract(5,3);// kuch bhi nhi ayega
+        console.log(subtract(5,3));//2
+        const result =subtract(8,3);
+        console.log("result:",result);//2
+    </script>
+</body>
+</html>

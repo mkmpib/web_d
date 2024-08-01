@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mapmethod</title>
+</head>
+<body>
+    <script>
+         // printing object using map
+     const myObject ={
+        js:'javascript',
+        cpp:'c++',
+        rb:'ruby',
+        swift:'swift by apple'
+     }
+     for( const key in myObject){
+        console.log(key);// printing keys
+        console.log(myObject[key]);// printing values
+        console.log(`${key} is shortcut of ${myObject[key]}`);
+     }
+     
+     // for in arrays
+     const programming=["js","rb","py","java","cpp"]
+     for (const key in programming) {
+           console.log(key);
+           console.log(programming[key]);
+        }
+     
+    </script>
+</body>
+</html>

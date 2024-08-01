@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>For Each</title>
+  </head>
+  <body>
+    <script>
+      //for each
+      const coding = ["js", "cpp", "rubi", "java"];
+      const cod = ["js", "cpp", "rubi", "java"];
+      // yhan pe jo function hai vo call back kar raha hai
+      coding.forEach(function (value) {
+        console.log(value);
+      });
+  
+     // using arrow method
+     cod.forEach((item)=>{        // bus is fuction ka naam nhi dete h usko call back bolte h
+        console.log(item);         // direct parameter deke print kra dete hai
+     })      
+    </script>
+  </body>
+</html>

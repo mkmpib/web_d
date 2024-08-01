@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mapmethod</title>
+</head>
+<body>
+    <script>
+         // const map ki jga pe or bhi likh skte hia hmm ye variable h,jis order me likhte hai usi me return karta hia 
+      const map =new Map()  
+      map.set('In',"India")
+      map.set('USA',"United State Of America")
+      map.set('FR',"France")
+      map.set('In',"India")  /// nhi retutn hoga kyoki  dublicate nhi return hota hai
+
+      console.log(map);
+     console.log( map.get('in'));// nhi cl r
+
+
+     // for of loop on map
+
+     for (const [key,value] of map) {
+         console.log(key,':-',value);
+     }
+     // printing object using map
+     const myObject ={
+        js:'javascript',
+        cpp:'c++',
+        rb:'ruby',
+        swift:'swift by apple'
+     }
+     
+    </script>
+</body>
+</html>
