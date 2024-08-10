@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise</title>
+</head>
+<body>
+
+    <!-- blue bird and q promice ki libray thi jo phele use hoti thi -->
+    <script>
+        //creation
+const promiseOne=new Promise(function(resolve,reject){
+    // use of promises : Do  an asynk task 2. database call 3.cryptography 4 network
+    setTimeout(function(){
+        console.log("Async task is complete");
+        resolve();// to run the (.then) we need to use here resolve ki baad hi then vali output aayegi
+},1000);
+})
+//consmue of promise
+promiseOne.then(function(){
+    console.log("Promise Consumed");// ye output hmesa promise ki output ke baad aayegi
+})
+
+//2nd way to declare promise
+ new Promise(function(resolve,reject){
+    setTimeout(function(){
+        console.log("Async tast 2 comleted");
+        resolve();// so taht our (.then ) is excute
+    },1000);
+ }).then(function(resolve,reject){
+    console.log("async 2 resolved");
+ })
+
+
+ //3rd promise
+
+ const promise3=new Promise(function(resolve,reject){
+
+    setTimeout(function(){
+        resolve({username:"chai",emil:"mkmpib@123"})
+    },1000)
+ })
+ promise3.then(function(user){// jo yahn pe user is directly connected with resolve because it is connected with then
+    console.log(user);
+ })
+
+// console.log("fourth promise");// ye sbse  phle print ho jayega kyoki baki sbai me time lga hai 1 sec ja
+ // promise 4 
+ const promise4=new Promise(function(resolve,reject){
+  setTimeout(function(){
+    let error=false;
+    if(!error){
+        resolve({username:'mohit',pass:'123'})
+    }else{
+        reject('ERROR:Somthing went wrong')
+    }
+  },1000)
+
+ })
+ promise4.then((user)=>{
+    console.log(user);
+    return user.username;// is return se secom=nd then connected hai
+ }).then((userName)=>{ // userName variable ka naam hai hm kuj bhi rakh skte hai
+    console.log(userName);// ye print krayega user.username =mohit ko {chaining bolte hai }
+ }).catch((err)=>{
+    console.log(err);
+ })
+
+    </script>
+</body>
+</html>

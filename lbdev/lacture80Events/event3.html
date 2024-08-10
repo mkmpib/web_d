@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Events</title>
+    <style></style>
+  </head>
+  <body style="background-color: black; color: aliceblue">
+    <h2>Amaizing images</h2>
+    <ul id="images">
+      <li>
+        <img
+          width="150px"
+          id="photoshop"
+          src="https://images.pexels.com/photos/26699776/pexels-photo-26699776/free-photo-of-a-beach-with-yellow-and-white-umbrellas-and-chairs.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+          alt="photoshop"
+        />
+      </li>
+      <li>
+        <img
+          width="150px"
+          id="japan"
+          src="https://images.pexels.com/photos/27275526/pexels-photo-27275526/free-photo-of-cappadocia.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          alt=""
+        />
+      </li>
+      <li>
+        <img
+          width="150px"
+          id="river"
+          src="https://images.pexels.com/photos/27349052/pexels-photo-27349052/free-photo-of-two-chairs-sit-outside-a-storefront-window-with-the-word-brooklyn-on-it.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          alt=""
+        />
+      </li>
+      <!-- if we want to onclick event on owl  onclick="alert('owel')" -->
+      <li>
+        <img
+          width="150px"
+          id="owl"
+          src="https://images.pexels.com/photos/27307368/pexels-photo-27307368/free-photo-of-jjj.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          alt=""
+        />
+      </li>
+      <li style="color: aliceblue">
+        <a href="https://google.com" id="google">Google</a>
+      </li>
+    </ul>
+    <script>
+     
+        // isme problam hai ager me li pe click kruga to sara hi remove ho jayega
+    //    document.querySelector('#images').addEventListener('click',function(r){
+    //     console.log(r.target.parentNode);
+    //     let removeit=r.target.parentNode; // isse ye li ke pass phuc raha hai
+    //     // removeit.remove();// ye ajj use hota hai
+    //     removeit.parentNode.removeChild(removeit);// sbse phle ye li ke parent node ke pass gya (ul ke pass)then isne remove kiya childe ko jo removeit me store hai
+    //    },false)
+
+
+
+    // second way is se ager li pe click hoga to delete nhi hogi file
+    document.querySelector('#images').addEventListener('click',function(e){
+        console.log(e.target.tagName); // tagname return karega
+        if(e.target.tagName ==='IMG'){
+            console.log(e.target.id);
+         let removeit=e.target.parentNode;
+         removeit.remove();
+        }
+    },false)
+
+    </script>
+  </body>
+</html>

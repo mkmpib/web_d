@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Unlimited projects</title>
+  </head>
+  <body><center>
+    <h1>Start should change the background color every second</h1>
+      <br />
+    <button style="padding: 15px; width: 100px; border: 3px solid black;" id="start">Start</button>
+    <button   style="padding: 15px; width: 100px; border: 3px solid black;" id="stop">Stop</button>
+  
+    </center>
+   
+
+    <script>
+     //gerate a random color
+
+     const randomColor=function(){
+        const hex='0123456789ABCDEF';
+        let color='#';
+        for(let i=0;i<6;i++){
+            color+=hex[Math.floor(Math.random()*16)];
+        }
+        return color;
+     };
+    //  console.log(Math.floor(Math.random()*16));
+    console.log(randomColor());
+     let interValid;// so that we can acces it in clearintervel
+//  starting the color
+    const startChangingColor=function(){
+        // to make code efficent we use if here
+        // interValid=setInterval(changeBGColor,1000);
+        if(!interValid){
+            interValid=interValid=setInterval(changeBGColor,1000);
+        }
+        function changeBGColor(){
+            document.body.style.backgroundColor=randomColor();
+
+        }
+    };
+    //stoping the color
+    const stopChangingColor=function(){
+        clearInterval(interValid);
+        interValid=null;// to free the memory space and make code efective
+    };
+
+ document.querySelector('#start').addEventListener('click',startChangingColor);
+ document.querySelector('#stop').addEventListener('click',stopChangingColor);
+
+     
+    </script>
+  </body>
+</html>

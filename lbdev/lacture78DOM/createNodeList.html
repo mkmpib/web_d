@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creatin of node list</title>
+</head>
+<body style="background-color:black; color: aliceblue;"></body>
+    <script>
+const div=document.createElement('div');
+console.log(div);
+div.className= "main"
+// div.id="myid"
+div.id=Math.round(Math.random()*10+1); /// id her baar chinge hoti rhegi
+div.setAttribute("title","generated title")
+div.style.backgroundColor="green"
+div.style.padding="12px"
+
+// attiching with page because ye document me show nhi ho raha h
+// div.innerText="mohit"  // ye jyda thik nhi hota hai ye value ko overwrite karta hai(2 step leta h)
+const addText=document.createTextNode("mohit kumar")
+div.appendChild(addText);
+
+// for adding the new elemnt show the div
+document.body.appendChild(div);
+    </script>
+</body>
+</html>

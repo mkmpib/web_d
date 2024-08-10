@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Elwment</title>
+</head>
+<body style="background-color:black; color: aliceblue;">
+    <div class="parent" >
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednestday</div>
+        <div class="day">trustday</div>
+    </div>
+   <script>
+    // queryselector me hmm (.) lga ke krte hi acess
+  const parent1 = document.querySelector('.parent');
+  console.log(parent1);
+  console.log(parent1.children); // for printing the all chiren div
+  console.log(parent1.children[1]); // for prinng the childe div particulary
+  console.log(parent1.children[1].innerHTML);// printing the content of div
+
+  // lopp for sbsme cal skta hai che array ho ya node collection
+
+ console.log("Value print using for loop:---");
+  for(let i=0;i<parent1.children.length;i++){
+    console.log(parent1.children[i].innerHTML);
+  } 
+
+
+  parent1.children[1].style.color="red";// change the color red
+  console.log(parent1.firstElementChild);
+  console.log(parent1.lastElementChild);
+
+
+  // move child to parent
+  const dayOne=document.querySelector('.day');
+  console.log(dayOne);
+  console.log(dayOne.parentElement); // givs you parent element
+  console.log(dayOne.nextElementSibling); // givs you sibling(bro) divs (tuesday second element)
+
+  // line break ko bhi count krtahai ye node list me per ek line break ke baad dusra nhi karta hai
+  console.log("NODES: ",parent1.childNodes);
+  
+
+
+
+
+   </script> 
+</body>
+</html>

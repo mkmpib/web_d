@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Target Example</title>
+  </head>
+  <body>
+    <button class="myButton">Button 1</button>
+    <button class="myButton">Button 2 <span>kumar</span></button>
+    <button class="myButton">Button 3<span>mohit</span></button>
+
+    <script>
+      // Select all buttons with the class 'myButton'
+      const buttons = document.querySelectorAll(".myButton");
+
+      // Attach an event listener to each button
+      buttons.forEach((button) => {
+        button.addEventListener("click", function (event) {
+          // Log the target element
+          console.log("Clicked button:", event);
+          console.log("Clicked button:", event.target);
+          // Log the inner text of the clicked button
+        //   console.log("Button text:", event.target.innerText);
+          //logs the inwe html of the clicked button
+         
+        //   console.log("Button text:", event.target.innerHtml);
+        //   console.log("Button text:", event.target.textContent);
+           
+        });
+      });
+    </script>
+  </body>
+</html>

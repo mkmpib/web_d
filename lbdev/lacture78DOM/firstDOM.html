@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+        body{
+            background-color: black;
+            color: aliceblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 id="header" class="headmk">Dom learning on mohit website <span style="display:none">test kro</span></h1>
+        <h2>Lorem, ipsum dolor.</h2>
+        <h3>Lorem, ipsum dolor sit amet consectetur adipisicing.</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda asperiores quisquam, tempore soluta, dolor laboriosam eligendi adipisci aliquam corporis, id nulla a!</p>
+        <input type="password">
+        <ul>
+            <li class="listitem">one<span>mk</span></li>
+            <li class="listitem">two</li>
+            <li class="listitem">four</li>
+            <li class="listitem">thre</li>
+        </ul>
+    </div>
+    <script>
+        // for targeting with id by get manipulate element
+        let element=document.getElementById('header');
+        console.log(element)
+        element.style.color="green"  // for css
+         console.log(element.id)
+         console.log(element.className)
+         console.log(element.getAttribute) // btana pdega konsa attribute chiye h
+         console.log(element.getAttribute('id')) // id name return krega ya value
+        console.log(element.setAttribute('class','rohit')) // class name rohit ho jayega
+        console.log(element) 
+
+        // for accesing the content
+        console.log(element.innerText) // jo content display none me hoga vo nhi return karega
+         console.log(element.textContent)// puri line me jo content hoga vo return krega included spa n also
+         console.log(element.innerHTML)//content ke sath span or other attributr bhi return krega
+
+         let ele =document.getElementsByClassName('headmk')
+         console.log(ele)
+
+
+         // quearySelector for finding or getting the elements
+    //   document.querySelector('h1') 
+
+         
+         
+
+    </script>
+</body>
+</html>

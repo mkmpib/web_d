@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create and Remove</title>
+</head>
+<body style="background-color:black; color: aliceblue;">
+<ul class="unorder">
+    <li>JavaScript</li>
+</ul>
+
+
+    <script>
+        // basic way but isme triversing jyada hoti hai to less otmize hai
+     function addLanguage(langName){
+        const li=document.createElement('li');
+        li.innerHTML=(`${langName}`);
+        document.querySelector(`.unorder`).appendChild(li);
+     }
+     addLanguage("Cpp");
+     addLanguage("java");
+     addLanguage("pyton");
+
+
+     // second way optimized
+
+     function addOptiLanguage(langName){
+        const li=document.createElement('li');
+        li.appendChild(document.createTextNode(langName)); // alge variable me bhi stor kr skte the doc.cre.textnode ko
+        document.querySelector('.unorder').appendChild(li);
+     }
+     addOptiLanguage("golang")
+
+
+     // edit the values
+
+     const secondLang =document.querySelector("li:nth-child(2)"); // dusri value ko select kr raha hai
+     const newLi = document.createElement('li');
+     // secondLang.innerHTML="moji"
+     newLi.textContent="moji";  // change cpp to moji
+     secondLang.replaceWith(newLi);
+
+
+     //another edit example
+     const firstLang=document.querySelector("li:first-child")
+     firstLang.outerHTML ='<li>TypeScript<li>';// puri li hi change kr di h
+
+        //remove 
+        const lastLang=document.querySelector('li:last-child')
+        lastLang.remove();// remove golang
+    </script>
+</body>
+</html>

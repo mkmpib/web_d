@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Events</title>
+    <style></style>
+  </head>
+  <body style="background-color: black; color: aliceblue">
+    <h2>Amaizing images</h2>
+    <ul id="images">
+      <li>
+        <img
+          width="150px"
+          id="photoshop"
+          src="https://images.pexels.com/photos/26699776/pexels-photo-26699776/free-photo-of-a-beach-with-yellow-and-white-umbrellas-and-chairs.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+          alt="photoshop"
+        />
+      </li>
+      <li>
+        <img
+          width="150px"
+          id="japan"
+          src="https://images.pexels.com/photos/27275526/pexels-photo-27275526/free-photo-of-cappadocia.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          alt=""
+        />
+      </li>
+      <li>
+        <img
+          width="150px"
+          id="river"
+          src="https://images.pexels.com/photos/27349052/pexels-photo-27349052/free-photo-of-two-chairs-sit-outside-a-storefront-window-with-the-word-brooklyn-on-it.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          alt=""
+        />
+      </li>
+      <!-- if we want to onclick event on owl  onclick="alert('owel')" -->
+      <li>
+        <img
+          width="150px"
+          id="owl"
+          src="https://images.pexels.com/photos/27307368/pexels-photo-27307368/free-photo-of-jjj.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          alt=""
+        />
+      </li>
+      <li style="color: aliceblue">
+        <a href="https://google.com" id="google">Google</a>
+      </li>
+    </ul>
+    <script>
+      // second approch
+      //  document.getElementById('owl').onclick=function(){
+      //     alert("owl clicked by onclick")
+      //  } but event listener is best way
+
+      // third approch
+      // document.getElementById('owl').addEventListener('click',function(){
+      //     alert("owl is clicked by evnt listener");
+      // },false)
+
+      //attacheEvent() jb internet explorer hota tha
+      // jquery-on hota tha directly
+
+      // event capuring
+      // document.getElementById('images').addEventListener('click',function(e){
+      //     console.log('clicked inside the ul');
+      // },true)
+      // document.getElementById('owl').addEventListener('click',function(){
+      //     console.log('owl clicked')
+      // },true)
+
+      // bubble phase
+      document.getElementById("images").addEventListener(
+        "click",
+        function (e) {
+          console.log("clicked inside the ul");
+        },
+        false
+      );
+      document.getElementById("owl").addEventListener(
+        "click",
+        function (e) {
+          console.log("owl clicked");
+          e.stopPropagation(); // ab capturing jesi output ayegi
+        },
+        false
+      );
+
+      // me nhi chata ki google pe click kar ke google oprn ho
+      document.getElementById("google").addEventListener('click',function(f){
+        f.preventDefault();
+        console.log("google clicked");
+        // f.stopPropagation()
+      },false)
+        
+       
+
+    </script>
+  </body>
+</html>

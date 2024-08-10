@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Set intervel</title>
+  </head>
+  <body>
+    <h1>Welocme mkmpib</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+    <br />
+    <button id="start1">Start</button>
+    <button id="stop1">Stop</button>
+
+    <script>
+      // ye 2 sec baad print kartarehega baar baar
+      //  const sayDate=function(){
+      //           console.log('kumar', Date.now());
+      //       }
+      //       setInterval(sayDate,2000);
+
+      // giving the parameter
+      const date1 = function (str) {
+        console.log(str, Date.now());
+      };
+
+      // for start the intervel functionality
+      document.querySelector("#start").addEventListener("click", function () {
+        setInterval(date1, 2000, "h1");
+      });
+
+      // declare const so that we stop it because it giving the ouput in console againagain
+      //for stop the intervel functionality
+      const intervelid = setInterval(date1, 2000, "h12");
+      document.querySelector("#stop").addEventListener(
+        "click",
+        function () {
+          clearInterval(intervelid);
+        },
+        false
+      );
+
+      //assignment
+// function variable store
+      const stint = function (str) {
+        console.log(str, Date.now());
+      };
+      let interValid;
+      document.querySelector("#start1").addEventListener("click", function () {
+        interValid = setInterval(stint, 1000, "hello");
+      });
+      //for stop
+      document.querySelector("#stop1").addEventListener("click", function () {
+        clearInterval(interValid);
+      });
+    </script>
+  </body>
+</html>

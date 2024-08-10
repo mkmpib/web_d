@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Changer</title>
+    <!-- css -->
+    <style>
+/* body{
+    background-color: beige;
+    
+} */
+.button{
+    border: 2px solid black;
+
+    gap :2px;
+    padding: 25px;
+   
+}
+#grey{
+    background-color: grey;
+
+}
+#red{
+    background-color: red;
+}
+#blue{
+    background-color: blue;
+}
+#green{
+    background-color: green;
+}
+h1{
+    padding:30px;
+}
+h2{
+    padding: 30px;
+}
+    </style>
+</head>
+<body>
+    <center>
+    <div class="container">
+ <h1>Color Scheme Switcher</h1>
+ <span class="button" id="grey">Grey</span>
+ <span class="button" id="red">Red</span>
+ <span class="button" id="blue">Blue</span>
+ <span class="button" id="green">Green</span>
+<h2>Try clicking on one of the colors above to change the background color of this page!</h2>
+</div>
+
+</center>
+    
+    <script>
+ const buttons=document.querySelectorAll('.button');
+ const body=document.querySelector('body');
+
+ buttons.forEach(function(button){
+    // console.log(button); // for printing the  buttons in consol
+    button.addEventListener('click',function(e){
+        // console.log(e);
+        // console.log(e.target);
+        if(e.target.id==='grey'){
+            // body.style.backgroundColor=grey;
+            body.style.backgroundColor=e.target.id;
+        }
+        if(e.target.id==='red'){
+            // body.style.backgroundColor=grey;
+            body.style.backgroundColor=e.target.id;
+        }
+        if(e.target.id==='blue'){
+            body.style.backgroundColor=e.target.id;
+        }
+        if(e.target.id==='green'){
+            body.style.backgroundColor=e.target.id;
+        }
+        // const mk=e.target.id;
+        // switch (mk) {
+        //     case 1:mk==='grey'
+        //        return  body.style.backgroundColor=e.target.id;
+        //         break;
+        
+        //     default:
+        //         break;
+        // }
+    });
+ });
+
+
+
+
+
+
+    </script>
+</body>
+</html>

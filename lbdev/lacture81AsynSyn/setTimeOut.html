@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Set timeout</title>
+  </head>
+  <body>
+    <h1>Welocme mkmpib</h1>
+    <button id="stop">Stop</button>
+
+    <script>
+      // give the function in the setTimeout
+      setTimeout(function () {
+        console.log("mohit");
+      }, 2000);
+
+      // store the variable in the function
+      const handler = function () {
+        console.log("Using declare the function in variable");
+      };
+      setTimeout(handler, 2000);
+
+      // ye 2 sec baad print kartarehega baar baar
+      // setInterval(function(){
+      //     console.log('kumar');
+      // },2000)
+
+
+
+      // printing change text
+      const changeText = function(){
+        document.querySelector('h1').innerHTML="Welcome to learning java script course";
+      }
+    
+    //   setTimeout(changeText,1000); // comment for running the stoptimer
+
+
+      // to stop the stop timer
+      const stopTimer =setTimeout(changeText,2000);
+     // clearTimeout(stopTimer); // purane vali hi output ayegi
+
+
+     document.querySelector('#stop').addEventListener('click',function(){
+        clearTimeout(stopTimer);
+        console.log("stopped"); // when we click the stoped button then output cant not change
+     })
+
+    </script>
+  </body>
+</html>
