@@ -66,13 +66,14 @@
           // console.log(data.status);
           // console.log(data.ok);
           console.log(data);
-          return data.json(); // get in json change into object
+          return data.json(); // get in json change into object so its become readable
         })
-        .then((completedata) => {
+        .then((completedata) => {//chaining of then and this then take the value of before then return data h
           let data1 = "";
           completedata.map((values) => {
+            
             data1 += `<div class="card" style="width:450px">
-                    <h1 class="title">${values.title}</h1>
+                    <h1 class="title">${values.title}</h1>  // yr title jo api me hai usko fatch krega
                     <img src=${values.image} alt""">
                     <div>
                         <p>${values.description}</p>

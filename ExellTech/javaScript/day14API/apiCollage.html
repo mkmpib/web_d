@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Apna</title>
+</head>
+<body>
+  <button id="btn">click</button>
+  <p id="fact"></p>
+  <button id="ok">click</button>
+  <p id="facts"></p>
+
+
+
+
+
+
+
+    <script>
+
+//         const url="https://fakestoreapi.com/products";
+//         let promise=fetch(url);
+//         console.log(promise);// starting me padding aata hai fir jab usko open krte hai to fullfilled ho jata hia
+        let para=document.getElementById("fact");
+        let btnn=document.getElementById("btn");
+//         // async await api
+//          //iskon clane ke liye getFacts ko console me call karna pdega
+//         const getFacts=async()=>{
+//             console.log("getting data.......");
+//             let response=await fetch(url);
+//             console.log(response);
+//             console.log(response.status);//200 aayega successful codeh
+// //is step me json se data aa raha hai data object me so that we print that
+//             let data= await response.json();
+//             // console.log(data);
+//             para.innerText=data[0].text
+//         };
+
+
+  // using promises
+
+  const url="https://fakestoreapi.com/products";
+  function getFacts(){
+    fetch(url)
+    .then((response)=>{
+        return response.json();
+    })
+    .then((data)=>{
+        console.log(data);
+        para.innerText=data[2].title;
+    });
+  }
+  btnn.addEventListener("click",getFacts);
+
+
+
+   const  URL ="https://cat-fact.herokuapp.com/facts";
+     let paras=document.getElementById("facts");
+        let btn=document.getElementById("ok");
+
+        const getFactss=async()=>{
+            let response=await fetch(URL);
+            let dta=await response.json();
+            paras.innerText=data[0].text;
+        }
+        btn.addEventListener("click",getFactss)
+    </script>
+
+   
+</body>
+</html>

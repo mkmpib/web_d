@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        add{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <center>
+    <form onsubmit="event.preventDefault();valid()">
+        <label>Username</label> <br>
+        <input type="text" id="user" placeholder="Username"><br>
+        <span id="add" class="error"></span>
+        <br><br>
+       <label>Password</label><br>
+        <input type="password" id="pass" placeholder="Password"><br>
+        <span id="add1"></span>
+        <br><br>
+       <label>Confirm Password</label> <br>
+       <input type="password" id="confirm" placeholder="Confirm Password"><br>
+        <!-- <input type="password" id="confirm" placeholder="Confirm Password"><br> -->
+        <!-- <span id="add2"></span> -->
+            <span id="add2" class="error"></span>
+        <br><br>
+          <label>Email</label><br>
+        <input type="text" id="mail" placeholder="Enter your Email"><br>
+        <span id="add3" class="error"></span>
+        <br><br>
+          <label>Mobile no</label> <br>
+        <input type="number" id="number" placeholder="Enter your Mobile No"><br>
+        <span id="add4" class="error"></span><br><br>
+        <input type="submit">
+        <br><br>
+        
+    </form>
+</center>
+<script>
+ function valid() {
+            var isValid = true;
+
+            var userr = document.getElementById("user").value;
+            var pass = document.getElementById("pass").value;
+            var confirm = document.getElementById("confirm").value;
+            var mail = document.getElementById("mail").value;
+            var number = document.getElementById("number").value;
+
+            // Clear previous error messages
+            document.getElementById("add").innerHTML = "";
+            document.getElementById("add1").innerHTML = "";
+            document.getElementById("add2").innerHTML = "";
+            document.getElementById("add3").innerHTML = "";
+            document.getElementById("add4").innerHTML = "";
+
+            // Validate Username
+            if (userr.trim() === "") {
+                document.getElementById("add").innerHTML = "Username is required";
+                isValid = false;
+            } else if (!isNaN(userr)) {
+                document.getElementById("add").innerHTML = "Username cannot be a number";
+                isValid = false;
+            }
+
+            // Validate Password
+            if (pass.trim() === "") {
+                document.getElementById("add1").innerHTML = "Password is required";
+                isValid = false;
+            }
+
+            // Validate Confirm Password
+            if (confirm.trim() === "") {
+                document.getElementById("add2").innerHTML = "Confirm Password is required";
+                isValid = false;
+            } else if (pass !== confirm) {
+                document.getElementById("add2").innerHTML = "Passwords do not match";
+                isValid = false;
+            }
+
+            // Validate Email
+            if (mail.trim() === "") {
+                document.getElementById("add3").innerHTML = "Email is required";
+                isValid = false;
+            } else if (!/\S+@\S+\.\S+/.test(mail)) {
+                document.getElementById("add3").innerHTML = "Invalid email format";
+                isValid = false;
+            }
+
+            // Validate Mobile Number
+            if (number.trim() === "") {
+                document.getElementById("add4").innerHTML = "Mobile number is required";
+                isValid = false;
+            } else if (number.length < 10) {
+                document.getElementById("add4").innerHTML = "Mobile number must be at least 10 digits";
+                isValid = false;
+            }
+
+            return isValid;
+        }
+    </script>
+</body>
+</html>
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    
+    <style>
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <center>
+    <form onsubmit="event.preventDefault();valid()">
+        <label>Username</label> <br>
+        <input type="text" id="user" placeholder="Username"><br>
+        <span id="add" class="error"></span>
+        <br><br>
+        <label>Password</label><br>
+        <input type="password" id="pass" placeholder="Password"><br>
+        <span id="add1" class="error"></span>
+        <br><br>
+        <label>Confirm Password</label> <br>
+        <input type="password" id="confirm" placeholder="Confirm Password"><br>
+        <span id="add2" class="error"></span>
+        <br><br>
+        <label>Email</label><br>
+        <input type="text" id="mail" placeholder="Enter your Email"><br>
+        <span id="add3" class="error"></span>
+        <br><br>
+        <label>Mobile no</label> <br>
+        <input type="number" id="number" placeholder="Enter your Mobile No"><br>
+        <span id="add4" class="error"></span><br><br>
+        <input type="submit">
+        <br><br>
+        
+    </form>
+    </center>
+    <script>
+        function valid() {
+            var isValid = true;
+
+            var userr = document.getElementById("user").value;
+            var pass = document.getElementById("pass").value;
+            var confirm = document.getElementById("confirm").value;
+            var mail = document.getElementById("mail").value;
+            var number = document.getElementById("number").value;
+
+            // Clear previous error messages
+            document.getElementById("add").innerHTML = "";
+            document.getElementById("add1").innerHTML = "";
+            document.getElementById("add2").innerHTML = "";
+            document.getElementById("add3").innerHTML = "";
+            document.getElementById("add4").innerHTML = "";
+
+            // Validate Username
+            if (userr.trim() === "") {
+                document.getElementById("add").innerHTML = "Username is required";
+                isValid = false;
+            } else if (!isNaN(userr)) {
+                document.getElementById("add").innerHTML = "Username cannot be a number";
+                isValid = false;
+            }
+
+            // Validate Password
+            if (pass.trim() === "") {
+                document.getElementById("add1").innerHTML = "Password is required";
+                isValid = false;
+            }
+
+            // Validate Confirm Password
+            if (confirm.trim() === "") {
+                document.getElementById("add2").innerHTML = "Confirm Password is required";
+                isValid = false;
+            } else if (pass !== confirm) {
+                document.getElementById("add2").innerHTML = "Passwords do not match";
+                isValid = false;
+            }
+
+            // Validate Email
+            if (mail.trim() === "") {
+                document.getElementById("add3").innerHTML = "Email is required";
+                isValid = false;
+            } else if (!/\S+@\S+\.\S+/.test(mail)) {
+                document.getElementById("add3").innerHTML = "Invalid email format";
+                isValid = false;
+            }
+
+            // Validate Mobile Number
+            if (number.trim() === "") {
+                document.getElementById("add4").innerHTML = "Mobile number is required";
+                isValid = false;
+            } else if (number.length < 10) {
+                document.getElementById("add4").innerHTML = "Mobile number must be at least 10 digits";
+                isValid = false;
+            }
+
+            return isValid;
+        }
+    </script>
+</body>
+</html> -->

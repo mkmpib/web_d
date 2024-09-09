@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Odd and Even Numbers Table</title>
+    <style>
+        table {
+            width: 50%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 8px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Odd and Even Numbers</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>Odd Numbers</th>
+            <th>Even Numbers</th>
+        </tr>
+    </thead>
+    <tbody id="numberTable">
+    </tbody>
+</table>
+
+<script>
+    // Function to generate odd and even numbers
+    function generateNumbers(limit) {
+        let oddNumbers = [];
+        let evenNumbers = [];
+
+        for (let i = 1; i <= limit; i++) {
+            if (i % 2 === 0) {
+                evenNumbers.push(i);
+            } else {
+                oddNumbers.push(i);
+            }
+        }
+
+        return { oddNumbers, evenNumbers };
+    }
+
+    // Function to display numbers in a table
+    function displayNumbersInTable(limit) {
+        const { oddNumbers, evenNumbers } = generateNumbers(limit);
+
+        // Get the table body element
+        const tableBody = document.getElementById('numberTable');
+
+        // Find the larger array length
+        const maxLength = Math.max(oddNumbers.length, evenNumbers.length);
+
+        // Loop through and insert rows in the table
+        for (let i = 0; i < maxLength; i++) {
+            const row = document.createElement('tr');
+            const oddCell = document.createElement('td');
+            const evenCell = document.createElement('td');
+
+            oddCell.textContent = oddNumbers[i] || ''; // Insert odd number or leave blank
+            evenCell.textContent = evenNumbers[i] || ''; // Insert even number or leave blank
+
+            row.appendChild(oddCell);
+            row.appendChild(evenCell);
+            tableBody.appendChild(row);
+        }
+    }
+
+    // Display the numbers in a table with a limit of 20
+    displayNumbersInTable(19);
+</script>
+
+</body>
+</html>
+
+

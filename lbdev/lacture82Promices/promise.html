@@ -49,7 +49,7 @@ promiseOne.then(function(){
  // promise 4 
  const promise4=new Promise(function(resolve,reject){
   setTimeout(function(){
-    let error=false;
+    let error=false;// true krege to error aayega
     if(!error){
         resolve({username:'mohit',pass:'123'})
     }else{
@@ -63,10 +63,33 @@ promiseOne.then(function(){
     return user.username;// is return se secom=nd then connected hai
  }).then((userName)=>{ // userName variable ka naam hai hm kuj bhi rakh skte hai
     console.log(userName);// ye print krayega user.username =mohit ko {chaining bolte hai }
- }).catch((err)=>{
+ }).catch((err)=>{ //rejected se hota hai catch connected
     console.log(err);
- })
+ }).finally(()=>console.log('The promise is either resolved or rejected'))
 
+
+
+ //promise 5
+ const promise5=new Promise(function(resolve,reject){
+    setTimeout(function(){
+        let error=false;
+        if(!error){
+            resolve({username:"JavaScript",pass:'1234'})
+        }else{
+            reject('ERROR:JS went wrong')
+        }
+    },1000)
+ });
+
+ async function consumePromise5(){
+    try {
+        const response=await promise5;
+        console.log(response);
+    } catch (Error) {// catch always holds the eror by default
+        console.log('E:',Error);c 
+    }
+ }
+ consumePromise5()//calling of async
     </script>
 </body>
 </html>
